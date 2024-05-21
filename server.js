@@ -6,14 +6,13 @@ import express from "express";
 const app = express();
 import morgan from "morgan";
 import mongoose from "mongoose";
-import { body, validationResult } from "express-validator";
 
 //routers
 import jobRouter from "./routes/jobRouter.js";
-import errorHandlerMiddleware from "./middleware/errorHandlerMiddleware.js";
+import authRouter from "./routes/authRouter.js";
 
 //middlewares
-app.use(errorHandlerMiddleware);
+import errorHandlerMiddleware from "./middleware/errorHandlerMiddleware.js";
 
 if (process.env.NODE_ENV === "production") {
   app.use(morgan("dev"));
@@ -25,23 +24,14 @@ app.get("/", (req, res) => {
   res.send("hi");
 });
 
-app.post("/", (req, res) => {
-  console.log(req);
-  res.json({ message: "recieved", data: req.body });
-});
-
 app.use("/api/v1/jobs", jobRouter);
+app.use("/api/v1/auth", authRouter);
 
 app.use("*", (req, res) => {
   res.status(StatusCodes.NOT_FOUND).json({ msg: "not found !" });
 });
 
-// app.use((err, req, res, next) => {
-//   console.log(err);
-//   res
-//     .status(StatusCodes.INTERNAL_SERVER_ERROR)
-//     .json({ msg: "something went wrong !" });
-// });
+app.use(errorHandlerMiddleware);
 
 //Port
 const port = process.env.PORT || 3000;
