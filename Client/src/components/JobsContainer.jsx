@@ -10,7 +10,7 @@ const JobsContainer = () => {
   }
 
   return (
-    <div className="flex justify-center items-center flex-wrap gap-10 ">
+    <div className="flex justify-start items-center flex-wrap gap-10 ">
       {jobs.map((job) => {
         return <Job key={job._id} {...job} />;
       })}

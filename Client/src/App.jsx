@@ -21,6 +21,7 @@ import { loader as allJobsLoader } from "./pages/AllJobs";
 import { action as editJobAction } from "./pages/EditJob";
 import { loader as editJobLoader } from "./pages/EditJob";
 import { action as deleteJobAction } from "./pages/DeleteJob";
+import { loader as adminLoader } from "./pages/Admin";
 
 const appRouter = createBrowserRouter([
   {
@@ -72,6 +73,7 @@ const appRouter = createBrowserRouter([
           {
             path: "admin",
             element: <Admin />,
+            loader: adminLoader,
           },
           {
             path: "profile",
