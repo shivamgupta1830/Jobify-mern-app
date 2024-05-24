@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 import { Outlet, redirect, useLoaderData, useNavigate } from "react-router-dom";
 import customFetch from "../utils/customFetch";
@@ -56,11 +56,11 @@ const DashboardLayout = () => {
           <SmallSidebar />
           <BigSidebar />
         </div>
-        <div className="w-[100%] flex flex-col">
+        <div className="w-[100%] flex flex-col ">
           <div>
             <Navbar />
           </div>
-          <div>
+          <div className="bg-gray-200">
             <Outlet context={{ user }} />
           </div>
         </div>

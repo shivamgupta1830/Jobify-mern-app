@@ -1,4 +1,3 @@
-import React from "react";
 import Logo from "../components/Logo";
 
 import { Link, Form, redirect, useNavigation } from "react-router-dom";

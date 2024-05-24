@@ -1,4 +1,3 @@
-import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import {
   HomeLayout,
@@ -12,10 +11,16 @@ import {
   Stats,
   AllJobs,
   Profile,
+  EditJob,
 } from "./pages";
 import { action as registerAction } from "./pages/Register";
 import { action as LoginAction } from "./pages/Login";
 import { loader as dashboardLoader } from "./pages/DashboardLayout";
+import { action as addJobAction } from "./pages/AddJob";
+import { loader as allJobsLoader } from "./pages/AllJobs";
+import { action as editJobAction } from "./pages/EditJob";
+import { loader as editJobLoader } from "./pages/EditJob";
+import { action as deleteJobAction } from "./pages/DeleteJob";
 
 const appRouter = createBrowserRouter([
   {
@@ -45,6 +50,7 @@ const appRouter = createBrowserRouter([
           {
             index: true,
             element: <AddJob />,
+            action: addJobAction,
           },
           {
             path: "stats",
@@ -54,7 +60,15 @@ const appRouter = createBrowserRouter([
           {
             path: "all-jobs",
             element: <AllJobs />,
+            loader: allJobsLoader,
           },
+          {
+            path: "edit-job/:id",
+            element: <EditJob />,
+            action: editJobAction,
+            loader: editJobLoader,
+          },
+          { path: "delete-job/:id", action: deleteJobAction },
           {
             path: "admin",
             element: <Admin />,
