@@ -21,7 +21,7 @@ const AllJobs = () => {
   const { data } = useLoaderData();
 
   return (
-    <div className="p-8 h-[100vh]">
+    <div className="p-8 h-[100vh] p-8">
       <AllJobsContext.Provider value={{ data }}>
         <SearchContainer />
         <JobsContainer />
