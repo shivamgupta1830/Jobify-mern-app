@@ -1,6 +1,12 @@
 import Logo from "../components/Logo";
 
-import { Link, Form, redirect, useNavigation } from "react-router-dom";
+import {
+  Link,
+  Form,
+  redirect,
+  useNavigation,
+  useNavigate,
+} from "react-router-dom";
 import customFetch from "../utils/customFetch";
 import { toast } from "react-toastify";
 
@@ -17,9 +23,25 @@ export const action = async ({ request }) => {
   }
 };
 
-const Register = () => {
+const Login = () => {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
+
+  const navigate = useNavigate();
+  const loginDemoUser = async () => {
+    const data = {
+      email: "test123@gmail.com",
+      password: "secret123",
+    };
+    try {
+      await customFetch.post("/auth/login", data);
+      toast.success("take a test drive");
+      navigate("/dashboard");
+    } catch (error) {
+      toast.error(error?.response?.data?.msg);
+    }
+  };
+
   return (
     <Form
       method="post"
@@ -64,6 +86,7 @@ const Register = () => {
       <button
         type="button"
         className="bg-violet-600 rounded-sm py-2 px-3 text-white font-medium md:text-base text-sm hover:bg-violet-500 w-full mt-3 transition-all "
+        onClick={loginDemoUser}
       >
         Explore App
       </button>
@@ -80,4 +103,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;

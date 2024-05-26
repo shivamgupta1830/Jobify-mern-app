@@ -24,7 +24,7 @@ const AddJob = () => {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
   return (
-    <div className="bg-gray-200 h-[100vh] p-8 ">
+    <div className="bg-gray-200 min-h-[100vh] p-8 ">
       <Form
         method="post"
         className=" bg-white rounded-sm  p-6  flex flex-col justify-start items-start gap-10"
