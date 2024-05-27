@@ -27,10 +27,10 @@ const AddJob = () => {
     <div className="bg-gray-200 min-h-[100vh] p-8 ">
       <Form
         method="post"
-        className=" bg-white rounded-sm  p-6  flex flex-col justify-start items-start gap-10"
+        className="bg-white rounded-sm gap-4 p-8  flex flex-col justify-start  items-start capitalize"
       >
         <h3 className="text-2xl font-bold">Add Job</h3>
-        <div className="flex justify-start items-center gap-5 flex-wrap">
+        <div className="flex justify-start items-center gap-5 flex-wrap w-full">
           <div className=" flex flex-col w-[30%] gap-1">
             <label htmlFor="position" className="text-md">
               Position
@@ -81,7 +81,7 @@ const AddJob = () => {
               id="jobStatus"
               defaultValue={user.location}
               required
-              className="bg-gray-200 px-2 py-1 rounded-sm font-normal text-md  w-[40%]"
+              className="bg-gray-200 px-2 py-1 rounded-sm font-normal text-md  w-full"
             >
               {Object.values(JOB_STATUS).map((value) => (
                 <option key={value}>{value}</option>
@@ -99,7 +99,7 @@ const AddJob = () => {
               id="jobType"
               defaultValue={JOB_TYPE.PENDING}
               required
-              className="bg-gray-200 px-2 py-1 rounded-sm font-normal text-md  w-[40%]"
+              className="bg-gray-200 px-2 py-1 rounded-sm font-normal text-md  w-full"
             >
               {Object.values(JOB_TYPE).map((value) => (
                 <option key={value}>{value}</option>

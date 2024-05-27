@@ -27,11 +27,11 @@ const Profile = () => {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
   return (
-    <div className="bg-gray-200 h-[100vh] p-8 ">
+    <div className="bg-gray-200 min-h-[100vh] p-8 ">
       <Form
         method="post"
         encType="multipart/form-data"
-        className="bg-white rounded-sm  p-6  flex flex-col justify-start items-start gap-10"
+        className="bg-white rounded-sm  p-8 gap-4 flex flex-col justify-start  items-start capitalize"
       >
         <h3 className="text-2xl font-bold">Profile</h3>
 

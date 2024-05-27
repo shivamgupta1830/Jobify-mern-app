@@ -35,10 +35,10 @@ const EditJob = () => {
   const isSubmitting = navigation.state === "submitting";
 
   return (
-    <div className="bg-gray-200 h-[100vh] p-8 text-center">
+    <div className="bg-gray-200 min-h-[100vh] p-8 text-center">
       <Form
         method="patch"
-        className=" w-[90%] m-auto mt-8 flex flex-col justify-between items-start p-8 gap-6 bg-white "
+        className=" bg-white rounded-sm  p-8 gap-4 flex flex-col justify-start  items-start capitalize "
       >
         <h3 className="text-2xl font-bold">Edit Job</h3>
         <div className="flex justify-between items-center gap-10 w-full">
