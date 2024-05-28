@@ -30,7 +30,7 @@ const StatsContainer = ({ defaultStats }) => {
     },
   ];
   return (
-    <div className="flex justify-center items-start gap-8  ">
+    <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-8  ">
       {stats.map((item) => {
         return <StatItem key={item.title} {...item} />;
       })}

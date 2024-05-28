@@ -1,7 +1,7 @@
 const StatItem = ({ count, title, icon, color, bgc, border }) => {
   return (
     <div
-      className={`bg-white rounded-sm w-[27%] p-6 capitalize flex flex-col justify-start items-start gap-4 border-b-4 ${border}`}
+      className={`bg-white rounded-sm w-[75%] lg:w-[27%] h-[160px] p-6 capitalize flex flex-col justify-start items-start gap-4 border-b-4 ${border}`}
     >
       <header className="flex justify-between items-center w-full">
         <span className={`${color} text-3xl font-semibold`}>{count}</span>

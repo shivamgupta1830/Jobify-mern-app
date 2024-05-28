@@ -16,7 +16,7 @@ const NavLinks = ({ isBigSidebar }) => {
           <NavLink
             to={path}
             key={text}
-            className=" hover:text-violet-600 w-full flex justify-start gap-4 items-center hover:translate-x-1 transition-all"
+            className=" hover:text-violet-600 w-full flex justify-start gap-4 items-center hover:translate-x-1 transition-all  "
             onClick={isBigSidebar ? null : toggleSidebar}
           >
             <span>{icon}</span>

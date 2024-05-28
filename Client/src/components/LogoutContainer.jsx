@@ -8,7 +8,7 @@ const LogoutContainer = () => {
   const [showLogout, setShowLogout] = useState(false);
   const { user, logoutUser } = useDashboardContext();
   return (
-    <div className="relative">
+    <div className="relative -z-1">
       <button
         type="button"
         className="flex justify-between items-center gap-1 text-white bg-violet-600 hover:bg-violet-500 py-1 px-2 rounded-sm"

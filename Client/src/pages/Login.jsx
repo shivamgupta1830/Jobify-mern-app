@@ -58,7 +58,6 @@ const Login = () => {
           type="email"
           id="email"
           name="email"
-          defaultValue="shivam123@gmail.com"
           required
           className="bg-violet-100 px-3 py-2 rounded-sm font-normal"
         />
@@ -70,7 +69,6 @@ const Login = () => {
           type="password"
           id="password"
           name="password"
-          defaultValue="secret123"
           required
           className="bg-violet-100 px-3 py-2 rounded-sm font-normal"
         />

@@ -13,7 +13,9 @@ const Navbar = () => {
         <FaAlignLeft className="text-violet-600 text-2xl font-semibold" />
       </button>
       <div>
-        <h4 className="md:hidden">Dashboard</h4>
+        <h4 className="md:hidden text-xl font-bold text-violet-600">
+          Dashboard
+        </h4>
         <div className="hidden md:inline-block">
           <Logo />
         </div>

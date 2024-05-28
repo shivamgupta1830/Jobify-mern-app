@@ -41,8 +41,9 @@ const EditJob = () => {
         className=" bg-white rounded-sm  p-8 gap-4 flex flex-col justify-start  items-start capitalize "
       >
         <h3 className="text-2xl font-bold">Edit Job</h3>
-        <div className="flex justify-between items-center gap-10 w-full">
-          <div className="w-full flex flex-col  justify-start items-start gap-2">
+
+        <div className="flex flex-col justify-center items-center md:flex-row md:justify-start md:items-center  gap-4 md:gap-5 flex-wrap w-full">
+          <div className="flex flex-col justify-start items-start w-[90%] md:w-[30%] gap-1">
             <label htmlFor="position" className="text-md">
               Position
             </label>
@@ -55,7 +56,7 @@ const EditJob = () => {
               className="bg-gray-200 px-2 py-1 rounded-sm font-normal text-md  w-full"
             />
           </div>
-          <div className="w-full flex flex-col  justify-start items-start gap-2">
+          <div className="flex flex-col justify-start items-start w-[90%] md:w-[30%] gap-1">
             <label htmlFor="company" className="text-md">
               Company
             </label>
@@ -68,7 +69,7 @@ const EditJob = () => {
               className="bg-gray-200 px-2 py-1 rounded-sm font-normal text-md  w-full"
             />
           </div>
-          <div className="w-full flex flex-col  justify-start items-start gap-2">
+          <div className="flex flex-col justify-start items-start w-[90%] md:w-[30%] gap-1">
             <label htmlFor="jobLocation" className="text-md">
               Job Location
             </label>
@@ -81,9 +82,8 @@ const EditJob = () => {
               className="bg-gray-200 px-2 py-1 rounded-sm font-normal text-md  w-full"
             />
           </div>
-        </div>
-        <div className="flex justify-between items-center gap-10 w-full">
-          <div className="w-full flex flex-col  justify-start items-start gap-2">
+
+          <div className="flex flex-col justify-start items-start w-[90%] md:w-[30%] gap-1">
             <label htmlFor="jobStatus" className="text-md">
               Job Status
             </label>
@@ -100,7 +100,7 @@ const EditJob = () => {
               ))}
             </select>
           </div>
-          <div className="w-full flex flex-col  justify-start items-start gap-2">
+          <div className="flex flex-col justify-start items-start w-[90%] md:w-[30%] gap-1">
             <label htmlFor="jobType" className="text-md">
               Job Type
             </label>
@@ -119,7 +119,7 @@ const EditJob = () => {
           </div>
           <button
             type="submit"
-            className="bg-violet-600 rounded-sm px-2 py-1 text-white font-medium md:text-base text-sm hover:bg-violet-500 transition-all w-full mt-8"
+            className="bg-violet-600 rounded-sm px-2 py-1 text-white font-medium md:text-base text-sm hover:bg-violet-500 transition-all md:w-[30%] w-[90%] mt-8"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Submitting..." : "Submit"}

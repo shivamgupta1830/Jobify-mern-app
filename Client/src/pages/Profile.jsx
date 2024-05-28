@@ -35,8 +35,8 @@ const Profile = () => {
       >
         <h3 className="text-2xl font-bold">Profile</h3>
 
-        <div className="flex justify-start items-center gap-5 flex-wrap">
-          <div className=" flex flex-col w-[30%] gap-1">
+        <div className="flex flex-col justify-center items-center md:flex-row md:justify-start md:items-center  gap-4 md:gap-5 flex-wrap w-full">
+          <div className=" flex flex-col w-[90%] md:w-[30%] gap-1">
             <label htmlFor="image">Select an image file (max 0.5 MB):</label>
             <input
               type="file"
@@ -46,7 +46,7 @@ const Profile = () => {
               accept="image/*"
             />
           </div>
-          <div className=" flex flex-col  w-[30%] gap-1 ">
+          <div className=" flex flex-col w-[90%] md:w-[30%] gap-1 ">
             <label htmlFor="name">Name</label>
             <input
               type="text"
@@ -58,7 +58,7 @@ const Profile = () => {
             />
           </div>
 
-          <div className=" flex flex-col w-[30%] gap-1">
+          <div className=" flex flex-col w-[90%] md:w-[30%] gap-1">
             <label htmlFor="lastName">Last Name</label>
             <input
               type="text"
@@ -69,7 +69,7 @@ const Profile = () => {
               className="bg-gray-200 px-2 py-1 rounded-sm font-normal"
             />
           </div>
-          <div className="flex flex-col w-[30%] gap-1 ">
+          <div className=" flex flex-col w-[90%] md:w-[30%] gap-1">
             <label htmlFor="location">Location</label>
             <input
               type="text"
@@ -80,7 +80,7 @@ const Profile = () => {
               className="bg-gray-200 px-2 py-1 rounded-sm font-normal"
             />
           </div>
-          <div className=" flex flex-col w-[30%] gap-1">
+          <div className=" flex flex-col w-[90%] md:w-[30%] gap-1">
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -94,7 +94,7 @@ const Profile = () => {
 
           <button
             type="submit"
-            className="bg-violet-600 rounded-sm px-2 py-1 text-white font-medium md:text-base text-sm hover:bg-violet-500 mt-7 transition-all w-[30%] "
+            className="bg-violet-600 rounded-sm px-2 py-1 text-white font-medium md:text-base text-sm hover:bg-violet-500 mt-7 transition-all w-[90%] md:w-[30%]"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Updating..." : "Update"}

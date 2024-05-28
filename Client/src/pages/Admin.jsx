@@ -19,7 +19,7 @@ const Admin = () => {
   const { users, jobs } = useLoaderData();
 
   return (
-    <div className="bg-gray-200 h-[100vh] flex justify-center items-start gap-8 p-8 ">
+    <div className="bg-gray-200 h-[100vh] flex flex-col justify-start items-center lg:flex-row lg:justify-center lg:items-start gap-8 p-8 ">
       <StatItem
         count={users}
         icon={<FaSuitcaseRolling />}

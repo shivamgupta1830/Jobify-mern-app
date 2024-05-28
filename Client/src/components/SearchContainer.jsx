@@ -9,13 +9,14 @@ const SearchContainer = () => {
   const { search, jobStatus, jobType, sort } = searchValues;
 
   const submit = useSubmit();
+
   return (
     <div>
       <Form className="bg-white rounded-sm  gap-4 p-8  flex flex-col justify-start  items-start capitalize">
         <h3 className="text-2xl font-bold">Search</h3>
 
-        <div className="flex justify-start items-center gap-5 flex-wrap w-full">
-          <div className=" flex flex-col  w-[30%] gap-1 ">
+        <div className="flex flex-col justify-center items-center md:flex-row md:justify-start md:items-center  gap-4 md:gap-5 flex-wrap w-full">
+          <div className=" flex flex-col  w-[90%] md:w-[30%] gap-1 ">
             <label htmlFor="search">Search</label>
             <input
               type="search"
@@ -29,7 +30,7 @@ const SearchContainer = () => {
             />
           </div>
 
-          <div className="flex flex-col  w-[30%] gap-1 ">
+          <div className="flex flex-col  w-[90%] md:w-[30%] gap-1 ">
             <label htmlFor="jobStatus" className="text-md">
               Job Status
             </label>
@@ -48,7 +49,7 @@ const SearchContainer = () => {
               ))}
             </select>
           </div>
-          <div className="flex flex-col  w-[30%] gap-1">
+          <div className="flex flex-col  w-[90%] md:w-[30%] gap-1">
             <label htmlFor="jobType" className="text-md">
               Job Type
             </label>
@@ -68,7 +69,7 @@ const SearchContainer = () => {
             </select>
           </div>
 
-          <div className="flex flex-col  justify-start items-start gap-2 w-[30%]">
+          <div className="flex flex-col  justify-start items-start gap-2  w-[90%] md:w-[30%]">
             <label htmlFor="sort" className="text-md">
               Sort
             </label>
@@ -89,20 +90,10 @@ const SearchContainer = () => {
           </div>
           <Link
             to="/dashboard/all-jobs"
-            className="bg-violet-600 rounded-sm px-2 py-1 text-white font-medium md:text-base text-sm hover:bg-violet-500 mt-7 transition-all w-[30%] text-center"
+            className="bg-violet-600 rounded-sm px-2 py-1 text-white font-medium md:text-base text-sm hover:bg-violet-500 mt-7 transition-all  w-[90%] md:w-[30%] text-center"
           >
-            Reset search values
+            Reset
           </Link>
-
-          {/* <button
-            type="submit"
-            className="bg-violet-600 rounded-sm px-2 py-1 text-white font-medium md:text-base text-sm hover:bg-violet-500 mt-7 transition-all w-[30%] "
-
-            
-          >
-            Submit
-           
-          </button> */}
         </div>
       </Form>
     </div>

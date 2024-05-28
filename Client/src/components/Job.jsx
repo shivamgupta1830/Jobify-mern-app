@@ -27,7 +27,7 @@ const Job = ({
   };
 
   return (
-    <div className="bg-white w-[31%] p-4 rounded-sm capitalize hover:scale-105 transition-all shadow-md">
+    <div className="bg-white w-[100%] md:w-[100%] lg:w-[45%] p-4 rounded-sm capitalize hover:scale-105 transition-all shadow-md">
       <header className="flex justify-start gap-4 items-center px-1 mb-4  pb-2 border-b border-b-black">
         <div className="bg-violet-600 rounded-sm w-12  text-center px-2 py-3 text-white font-bold font-5xl">
           {company.charAt(0).toUpperCase()}
