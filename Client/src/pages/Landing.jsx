@@ -20,7 +20,7 @@ const Landing = () => {
             deadlines. Streamline communication, enhance collaboration, and
             ensure project success with real-time updates and insights.
           </p>
-          <div className="flex justify-center items-center gap-4">
+          <div className="flex xsm:flex-col sm:flex-row sm:justify-center sm:items-start gap-4 text-center">
             <Link
               to="/register"
               className="bg-violet-600 rounded-sm py-2 px-3 text-white font-normal md:text-base text-sm hover:bg-violet-500 transition-all "
