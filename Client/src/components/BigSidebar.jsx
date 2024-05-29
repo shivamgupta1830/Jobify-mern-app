@@ -9,7 +9,7 @@ const BigSidebar = () => {
   const { showSidebar } = useDashboardContext();
   return (
     <div className={showSidebar ? "hidden md:hidden" : "hidden md:block"}>
-      <div className="px-9 py-6 flex flex-col justify-start items-center gap-12  h-[100vh]">
+      <div className="px-9 py-6 flex flex-col justify-start items-center gap-12  min-h-[100vh]">
         <header>
           <Logo />
         </header>
